@@ -1,0 +1,99 @@
+<div class="container mt-3"  *ngIf="step === 1"> 
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header text-center">
+            <h3>User Registration</h3>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="onSubmitUserForm()">
+
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" [(ngModel)]="userData.email" name="email" required>
+              </div>
+  
+              <!-- Password -->
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" [(ngModel)]="userData.password" name="password" required>
+              </div>
+
+              <!-- Confirm Password -->
+              <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" [(ngModel)]="userData.confirmPassword" name="confirmPassword" required>
+              </div>
+  
+              <button type="submit" class="btn btn-primary w-100">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="step === 2">
+    <!-- Trainer Form -->
+    <h3>Trainer Registration</h3>
+    <form (ngSubmit)="onSubmitTrainerForm()">
+      <!-- Name -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="trainerData.name" name="name" required>
+      </div>
+      <!-- Birth Date -->
+      <div class="mb-3">
+        <label for="birth_date" class="form-label">Birth Date</label>
+        <input type="date" class="form-control" id="birth_date" [(ngModel)]="trainerData.birth_date" name="birthDate" required>
+      </div>
+      <!-- IGN -->
+      <div class="mb-3">
+        <label for="ign" class="form-label">IGN</label>
+        <input type="text" class="form-control" id="ign" [(ngModel)]="trainerData.ign" name="birthDate" required>
+      </div>
+      <!-- Start_Date -->
+      <div class="mb-3">
+        <label for="start_date" class="form-label">Start Date</label>
+        <input type="date" class="form-control" id="start_date" [(ngModel)]="trainerData.start_date" name="birthDate" required>
+      </div>
+      <!-- Level -->
+      <div class="mb-3">
+        <label for="level" class="form-label">Level</label>
+        <input type="number" class="form-control" id="level" [(ngModel)]="trainerData.level" name="birthDate" required>
+      </div>            
+      <!-- Initial XP -->
+      <div class="mb-3">
+        <label for="initial_xp" class="form-label">Initial XP</label>
+        <input type="number" class="form-control" id="initial_xp" [(ngModel)]="trainerData.initial_xp" name="birthDate" required>
+      </div>        
+      <!-- Initial Catch -->
+      <div class="mb-3">
+        <label for="initial_catch" class="form-label">Initial Catches</label>
+        <input type="number" class="form-control" id="initial_catch" [(ngModel)]="trainerData.initial_catch" name="birthDate" required>
+      </div>        
+      <!-- Country -->
+      <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" class="form-control" id="country" [(ngModel)]="trainerData.country" name="birthDate" required>
+      </div>        
+      <!-- State -->
+      <div class="mb-3">
+        <label for="state" class="form-label">State</label>
+        <input type="text" class="form-control" id="state" [(ngModel)]="trainerData.state" name="birthDate" required>
+      </div>     
+      <!-- Phone Number -->
+      <div class="mb-3">
+        <label for="phone_number" class="form-label">Phone Number</label>
+        <input type="number" class="form-control" id="phone_number" [(ngModel)]="trainerData.phone_number" name="birthDate" required>
+      </div>     
+      <!-- Area Code -->
+      <div class="mb-3">
+        <label for="area_code" class="form-label">Area Code</label>
+        <input type="number" class="form-control" id="area_code" [(ngModel)]="trainerData.area_code" name="birthDate" required>
+      </div>        
+      <!-- Additional Trainer Fields -->
+      <button type="submit" class="btn btn-primary">Register Trainer</button>
+    </form>
+  </div>
